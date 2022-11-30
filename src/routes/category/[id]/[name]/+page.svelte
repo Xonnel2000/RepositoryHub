@@ -108,22 +108,36 @@
   //     repo_address: repo_address,
   //   });
   // }
+  import { goto } from "$app/navigation";
+
+  function handlechangeData() {
+    console.log("urls");
+    goto("/");
+  }
 </script>
 
-<div class="flex flex-col w-full border-opacity-50">
+<div class="flex flex-col  ">
   <!-- this add Repositories button -->
+
   <div
     class="flex flex-row p-5 justify-evenly h-auto card bg-gray-800 rounded-box place-items-start   "
   >
+    <button
+      type="submit"
+      on:click={handlechangeData}
+      class="bg-gray-500 md:uppercase font-medium text-white p-2 rounded-md"
+    >
+      Home</button
+    >
     <h1
-      class=" text-2xl  font-semibold text-slate-50 uppercase underline decoration-dashed decoration-slate-400 md:text-1xs  decoration-4"
+      class="  text-center  font-semibold text-slate-50 uppercase underline decoration-dashed decoration-slate-400 md:text-1xs  decoration-4 md:text-2xl"
     >
       welcome to {data.name} Repository
     </h1>
     <button
       type="submit"
       on:click={showingModal}
-      class="bg-gray-500 text-white uppercase font-medium text-white p-2 rounded-md"
+      class="bg-gray-500 text-sm md:uppercase font-medium text-white p-2 rounded-md"
     >
       Add Repository</button
     >
@@ -131,7 +145,7 @@
   <!-- end of add Repositories -->
 
   <!-- start of Repo compoment -->
-  <div class="grid h-auto card bg-gray-800 rounded-box place-items-center p-3 ">
+  <div class=" h-auto  bg-gray-800 rounded-box  p-3 ">
     <Repo {...stuff} />
   </div>
   <!-- end of Repo -->

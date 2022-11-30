@@ -85,13 +85,13 @@
   </div>
   <div class="divider" />
   <div
-    class="flex flex-row h-auto card bg-gray-800 text-slate-50 rounded-box place-content-start "
+    class="flex flex-col  h-auto card bg-gray-800 text-slate-50 rounded-box place-content-start md:flex-row "
   >
-    <div class="w-1/2 p-4">
+    <div class=" p-4 md:w-1/2 w-full">
       <img src={logo} alt="" srcset="" />
     </div>
 
-    <div class=" w-1/2 p-4 overflow-hidden">
+    <div class=" md:w-1/2 md:w-full p-4 overflow-hidden">
       <div>
         <h1
           class="text-2xl uppercase underline decoration-dashed  decoration-4 decoration-slate-400"
@@ -103,7 +103,7 @@
       </div>
       <div class="divider" />
 
-      <div>
+      <div class="w-full">
         <h1
           class="text-2xl  uppercase underline decoration-dashed  decoration-4 decoration-slate-400"
         >
